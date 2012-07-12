@@ -13,7 +13,8 @@ For more information, please refer to the terms.txt file.
 
 #################################################################
 #MAEC XML --> HTML Transform v0.90                              #
-#Generates OVAL definitions/tests/objects from a MAEC XML file  #
+#Generates an HTML representation of a MAEC XML file. Displays  #
+#analyses, actions, objects, and action/object pools.           #
 #Compatible with content produced using MAEC Schema v1.1        #
 #v0.90                                                          #
 #08/19/2011                                                     #
