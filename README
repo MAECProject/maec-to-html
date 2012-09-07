@@ -1,0 +1,33 @@
+****************************************************
+
+      MAEC XML -> HTML Transform
+
+ Copyright (c) 2012 - The MITRE Corporation
+
+****************************************************
+
+BY USING THE MAEC XML to HTML TRANSFORM, YOU SIGNIFY YOUR ACCEPTANCE OF THE TERMS AND 
+CONDITIONS OF USE.  IF YOU DO NOT AGREE TO THESE TERMS, DO NOT USE THE MAEC XML to HTML TRANSFORM.
+
+For more information, please refer to the terms.txt file.
+
+#################################################################
+#MAEC XML --> HTML Transform v0.91                              #
+#Generates an HTML representation of a MAEC XML file. Displays  #
+#analyses, actions, objects, and action/object collections      #
+#Compatible with content produced using MAEC Schema v2.1        #
+#v0.91                                                          #
+#09/07/2012                                                     #
+#Ivan Kirillov//ikirillov@mitre.org                             #
+#MAEC - http://maec.mitre.org                                   #
+#################################################################
+--------------------------------------------------------------------------------
+--Included Files----------------------------------------------------------------
+
+README: this file.
+maec_to_html.xsl: the MAEC XML to HTML XSL Transform.
+--------------------------------------------------------------------------------
+--Usage Notes-------------------------------------------------------------------
+Use with your favorite XML Editor or XSLT interpreter (e.g. Saxon). 
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
