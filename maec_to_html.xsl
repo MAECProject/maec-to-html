@@ -3,7 +3,7 @@
 MAEC XML to HTML transform v0.91
 Compatible with MAEC Schema v2.1 output
 
-Updated 9/7/2012
+Updated 9/10/2012
 ikirillov@mitre.org
 -->
 
@@ -1345,63 +1345,6 @@ ikirillov@mitre.org
             </xsl:otherwise>
         </xsl:choose>
         </TD>       
-    </xsl:template>
-    
-    <xsl:template name="processCodeType">
-        <table id="one-column-emphasis">
-            <colgroup>
-                <col class="oce-first" />
-            </colgroup>
-            <tbody>
-                <xsl:if test="@codetype">
-                    <tr>
-                        <td>Type of Code</td>
-                        <td><xsl:value-of select="@codetype"/></td>
-                    </tr>
-                </xsl:if>
-                <xsl:if test="@language">
-                    <tr>
-                        <td>Programming Language</td>
-                        <td><xsl:value-of select="@language"/></td>
-                    </tr>
-                </xsl:if>
-                <xsl:if test="@start_address">
-                    <tr>
-                        <td>Start Address</td>
-                        <td><xsl:value-of select="@start_address"/></td>
-                    </tr>
-                </xsl:if>
-                <xsl:if test="@processor_family">
-                    <tr>
-                        <td>Processor Family (architecture)</td>
-                        <td><xsl:value-of select="@processor_family"/></td>
-                    </tr>
-                </xsl:if>
-                <xsl:if test="@xorpattern">
-                    <tr>
-                        <td>XOR Pattern (for encoded code)</td>
-                        <td><xsl:value-of select="@xorpattern"/></td>
-                    </tr>
-                </xsl:if>
-                <xsl:if test="maec:Code_Segment">
-                    <tr>
-                        <td>Code Segment (raw)</td>
-                        <td><xsl:value-of select="maec:Code_Segment"/></td>
-                    </tr>
-                </xsl:if>
-                <xsl:if test="maec:Code_Segment_XOR">
-                    <tr>
-                        <td>Code Segment (XOR encoded)</td>
-                        <td><xsl:value-of select="maec:Code_Segment_XOR"/></td>
-                    </tr>
-                </xsl:if>
-            </tbody>
-        </table><br/>
-        <xsl:if test="maec:External_File">
-            <xsl:for-each select="maec:External_File">
-                <xsl:call-template name="processObject"/>
-            </xsl:for-each>
-        </xsl:if>
     </xsl:template>
 
     <xsl:template name="processDefinedObject">
@@ -5334,76 +5277,6 @@ ikirillov@mitre.org
                 </tr>
             </tbody>
         </table>
-    </xsl:template>
-
-    <xsl:template name="processAssociatedCode">
-        <xsl:for-each select="maec:Associated_Code_Snippet">
-            <b>Associated Code Snippet</b>
-            <table id="hor-minimalist-a">
-                <thead>
-                    <tr>
-                        <th scope="col">Code Type</th>
-                        <th scope="col">Language</th>
-                        <th scope="col">Start Address</th>
-                        <th scope="col">Processor Family</th>
-                        <th scope="col">XOR Pattern</th>
-                    </tr>
-                    <xsl:choose>
-                        <xsl:when test="maec:Code_Snippet/@codetype">
-                            <td><xsl:value-of select="maec:Code_Snippet/@codetype"/></td>
-                        </xsl:when>
-                        <xsl:otherwise>
-                            <td>N/A</td>
-                        </xsl:otherwise>
-                    </xsl:choose>
-                    <xsl:choose>
-                        <xsl:when test="maec:Code_Snippet/@language">
-                            <td><xsl:value-of select="maec:Code_Snippet/@language"/></td>
-                        </xsl:when>
-                        <xsl:otherwise>
-                            <td>N/A</td>
-                        </xsl:otherwise>
-                    </xsl:choose>
-                    <xsl:choose>
-                        <xsl:when test="maec:Code_Snippet/@start_address">
-                            <td><xsl:value-of select="maec:Code_Snippet/@start_address"/></td>
-                        </xsl:when>
-                        <xsl:otherwise>
-                            <td>N/A</td>
-                        </xsl:otherwise>
-                    </xsl:choose>
-                    <xsl:choose>
-                        <xsl:when test="maec:Code_Snippet/@processor_family">
-                            <td><xsl:value-of select="maec:Code_Snippet/@processor_family"/></td>
-                        </xsl:when>
-                        <xsl:otherwise>
-                            <td>N/A</td>
-                        </xsl:otherwise>
-                    </xsl:choose>
-                    <xsl:choose>
-                        <xsl:when test="maec:Code_Snippet/@xor_pattern">
-                            <td><xsl:value-of select="maec:Code_Snippet/@xor_pattern"/></td>
-                        </xsl:when>
-                        <xsl:otherwise>
-                            <td>N/A</td>
-                        </xsl:otherwise>
-                    </xsl:choose>
-                </thead>
-            </table> <br/>
-            <xsl:if test="maec:Nature_Of_Relationship">
-                <xsl:value-of select="maec:Nature_Of_Relationship"/>
-            </xsl:if>
-            <xsl:if test="maec:Code_Snippet/maec:Code_Segment">
-                <div id="inner_container">
-                    <xsl:value-of select="maec:Code_Snippet/maec:Code_Segment"/>
-                </div> <br/>
-            </xsl:if>
-            <xsl:if test="maec:Code_Snippet/maec:Code_Segment_XOR">
-                <div id="inner_container">
-                    <xsl:value-of select="maec:Code_Snippet/maec:Code_Segment_XOR"/>
-                </div> <br/>
-            </xsl:if>
-        </xsl:for-each>
     </xsl:template>
     
     <xsl:template name="processStructuredTextGroup">
