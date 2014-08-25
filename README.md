@@ -1,11 +1,7 @@
-MAEC to HTML Transform (DEPRECATED)
-===========================
+MAEC XML to HTML Transform (DEPRECATED)
+=======================================
 
-Overview
---------
+The functionality of the MAEC XML to HTML Transform has been incorporated into
+the [STIX-to-HTML](https://github.com/STIXProject/stix-to-html) utility.  This
+project has been deprecated.
 
-This project/transform has been deprecated in favor of the STIX-to-HTML utility,
-which also handles stand-alone MAEC documents. Please see: 
-https://github.com/STIXProject/stix-to-html
-
---------------------------------------------------------------------------------
